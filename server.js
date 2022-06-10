@@ -51,9 +51,9 @@ app.get('/', (request, response) => {
 app.get('/api/:name', (request, response) => {
     const fighterName = request.params.name.toLowerCase()
     if(fighters[fighterName]){
-        response.json(rappers[fighterName])
+        response.json(fighters[fighterName])
     }else{
-        response.json(rappers['unknown'])
+        response.json(fighters['unknown'])
     }
 })
 
